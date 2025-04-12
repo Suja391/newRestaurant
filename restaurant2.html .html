@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get The Delicious Roasted Chicken Right At Your Door</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #87CEFA, #6CA6CD);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px auto;
+      font-size: 26px;
+      color: #000080;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+
+    /* Slideshow styles */
+    .slideshow-container {
+      position: relative;
+      width: 600px;
+      height: 350px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .mySlides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .fade {
+      animation: fade 1.5s ease-in-out;
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    /* Middle images container */
+    .images-row {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .images-row img,
+    .images-row video {
+      width: 200px;
+      height: auto;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Form container */
+    .form-section {
+      margin: 20px auto 40px;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: inline-block;
+      padding: 20px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+
+    .form-section label {
+      display: inline-block;
+      width: 120px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .form-section input[type="text"] {
+      padding: 8px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .radio-group {
+      margin: 10px 0;
+    }
+
+    .radio-group label {
+      width: auto;
+      margin-left: 0;
+      font-weight: normal;
+      margin-right: 10px;
+    }
+
+    .radio-group input {
+      margin-right: 5px;
+    }
+
+    .submit-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: #228B22;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #006400;
+    }
+
+    #orderSummary {
+      display: none;
+      margin-top: 20px;
+      text-align: left;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+      .slideshow-container {
+        width: 90%;
+        height: auto;
+      }
+
+      .images-row {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .form-section {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .form-section label,
+      .form-section input {
+        width: 100%;
+        display: block;
+      }
+
+      .form-section input[type="text"] {
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Get The Delicious Roasted Chicken Right At Your Door</h1>
+
+  <!-- Slideshow Banner -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="https://i.pinimg.com/736x/f9/96/bf/f996bf49aba3f163e7e536ddbd38a86e.jpg" alt="Roasted Chicken 1">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://i.pinimg.com/736x/eb/53/0b/eb530b378aa4b2d839b69abf788a1e18.jpg" alt="Roasted Chicken 2">
+    </div>
+  </div>
+
+  <!-- Middle Images and Video -->
+  <div class="images-row">
+    <img src="Users/sujauddinahmed/Downloads/Money_Quest.jpg" alt="GIVE ME THE QUEST!">
+
+    <video controls>
+      <source src="/Users/sujauddinahmed/Downloads/mickeyMouse.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Order Form -->
+  <div class="form-section">
+    <form id="orderForm">
+      <div>
+        <label for="customerName">Enter your Name:</label>
+        <input type="text" id="customerName" name="customerName" placeholder="Your Name">
+      </div>
+
+      <div class="radio-group">
+        <label><strong>Choose the main dish:</strong></label><br>
+        <label><input type="radio" name="dish" value="Pizza"> Pizza</label>
+        <label><input type="radio" name="dish" value="Rice"> Rice</label>
+        <label><input type="radio" name="dish" value="Salad"> Salad</label>
+      </div>
+
+      <div class="radio-group">
+        <label><strong>Choose the time:</strong></label><br>
+        <label><input type="radio" name="time" value="Now"> Now</label>
+        <label><input type="radio" name="time" value="1 Hour"> 1 Hour</label>
+        <label><input type="radio" name="time" value="2 Hours"> 2 Hours</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Place Order</button>
+    </form>
+  </div>
+
+  <!-- Order Summary -->
+  <div id="orderSummary">
+    <h3>Order Summary</h3>
+    <p><strong>Name:</strong> <span id="summaryName"></span></p>
+    <p><strong>Main Dish:</strong> <span id="summaryDish"></span></p>
+    <p><strong>Price:</strong> <span id="summaryPrice"></span></p>
+    <p><strong>Delivery Time:</strong> <span id="summaryTime"></span></p>
+  </div>
+
+  <!-- Script -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      const slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+
+    // Order form handler
+    document.getElementById("orderForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("customerName").value;
+      const dish = document.querySelector("input[name='dish']:checked");
+      const time = document.querySelector("input[name='time']:checked");
+
+      if (!name || !dish || !time) {
+        alert("Please complete all fields.");
+        return;
+      }
+
+      const prices = {
+        "Pizza": "£14.99",
+        "Rice": "£4.99",
+        "Salad": "£2.99"
+      };
+
+      document.getElementById("summaryName").textContent = name;
+      document.getElementById("summaryDish").textContent = dish.value;
+      document.getElementById("summaryPrice").textContent = prices[dish.value];
+      document.getElementById("summaryTime").textContent = time.value;
+
+      document.getElementById("orderSummary").style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
